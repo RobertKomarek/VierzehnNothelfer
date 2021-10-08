@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="http://magic.com/schemas/gradients"
+             x:Class="VierzehnNothelfer.MainPage">
+
+
+
+    <Grid>
+        <magic:GradientView 
+            GradientSource="repeating-linear-gradient(295deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px,transparent 2px, transparent 4px),linear-gradient(340deg, rgb(29, 67, 158),rgb(219, 239, 242))"
+                            />
+      
+        <Frame x:Name="frame"
+            Margin="15,450,15,15"
+            BackgroundColor="SlateGray"
+            CornerRadius="20"/>
+        <StackLayout Margin="0,55,0,0">
+            <Label Text="Heilige Katharina" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" TextDecorations="Underline"/>
+            <Image x:Name="StCatarinaImage"
+                Source="stCatarina"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HeightRequest="450"
+                Margin="0,-200,0,0"/>
+            <Label x:Name="label"
+                FontSize="Large"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                HorizontalTextAlignment="Center"
+                Margin="25,200,25,25"
+                Text="Beschützerin der Mädchen, Jungfrauen und Ehefrauen, auch Helferin bei Leiden der Zunge und Sprachschwierigkeiten, und Patronin der Gelehrten sowie auch zahlreicher Handwerksberufe" />
+         </StackLayout>
+
+    </Grid>
+
+</ContentPage>
