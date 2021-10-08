@@ -17,8 +17,8 @@
             CornerRadius="20"/>
         <StackLayout Margin="0,55,0,0">
             <Label Text="Heilige Katharina" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" TextDecorations="Underline"/>
-            <Image x:Name="StCatarinaImage"
-                Source="stCatarina"
+            <Image x:Name="stCatarinaImage"
+                Source="StCatarina"
                 Aspect="AspectFit"
                 HorizontalOptions="Center"
                 VerticalOptions="Start"

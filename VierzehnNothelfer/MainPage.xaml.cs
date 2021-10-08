@@ -19,7 +19,7 @@ namespace VierzehnNothelfer
         {
             base.OnAppearing();
 
-            await StCatarinaImage.TranslateTo(0, 200, 500);
+            await stCatarinaImage.TranslateTo(0, 200, 500);
             await label.TranslateTo(0, -200, 500);
             await frame.TranslateTo(0, -200, 500);
         }
