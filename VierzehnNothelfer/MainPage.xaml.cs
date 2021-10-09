@@ -18,10 +18,13 @@ namespace VierzehnNothelfer
         async protected override void OnAppearing()
         {
             base.OnAppearing();
+            lblHeilige.Opacity = 0;
 
             await stCatarinaImage.TranslateTo(0, 200, 500);
-            await label.TranslateTo(0, -200, 500);
-            await frame.TranslateTo(0, -200, 500);
+            label.TranslateTo(0, -200, 500);
+            await pancakeView.TranslateTo(0, -200, 500);
+            //await frame.TranslateTo(0, -200, 500);
+            await lblHeilige.FadeTo(1, 1000);
         }
     }
 }
