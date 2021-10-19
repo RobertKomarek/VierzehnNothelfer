@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
+    xmlns:local="clr-namespace:VierzehnNothelferBackup.Models"
+    x:Class="VierzehnNothelfer.Views.NothelferCarouselView"
+    x:DataType="vm:NothelferViewModel">
+
+     <!--<ContentView.BindingContext>
+        <vm:NothelferViewModel/>
+    </ContentView.BindingContext>-->
+
+        <Grid>
+            <Label x:Name="lblHeiliger"
+                   x:DataType="local:NothelferBackup"
+                   Text="{Binding Heiliger}"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24" FontAttributes="Bold"
+                   TextDecorations="Underline"
+                   Margin="15">
+            </Label>
+
+            <pcv:PancakeView x:Name="pancakeView"
+                BackgroundGradientStartPoint="1,0" BackgroundGradientEndPoint="0,1"
+                pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
+                BackgroundColor="CornflowerBlue"
+                CornerRadius="20,20,0,0"
+                Margin="10,200,10,0"
+                HeightRequest="1000">
+                <pcv:PancakeView.BackgroundGradientStops>
+                    <pcv:GradientStopCollection>
+                        <pcv:GradientStop Color="Gray" Offset="0" />
+                        <pcv:GradientStop Color="DarkGray" Offset="0.4" />
+                        <pcv:GradientStop Color="LightGray" Offset="1.0" />
+                    </pcv:GradientStopCollection>
+                </pcv:PancakeView.BackgroundGradientStops>
+                    <Label x:Name="lblKurzbeschreibung"
+                        x:DataType="local:NothelferBackup"
+                        FontSize="Large"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        VerticalTextAlignment="Start"
+                        HorizontalTextAlignment="Center"
+                        Margin="10,310,10,0"
+                        Text="{Binding Kurzbeschreibung}"   />
+                </pcv:PancakeView>
+
+                <Image x:Name="imgBild"
+                    x:DataType="local:NothelferBackup"
+                    Source="{Binding Bild}"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    HeightRequest="450"
+                    Margin="0,50,0,0"/>
+        </Grid>
+</ContentView>

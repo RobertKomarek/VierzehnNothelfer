@@ -1,4 +1,5 @@
 ﻿using System;
+using VierzehnNothelfer.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,9 @@ namespace VierzehnNothelfer
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new NavigationPage(new NothelferPage());
+            MainPage = new NothelferPage();
+
         }
 
         protected override void OnStart()

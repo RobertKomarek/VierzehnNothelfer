@@ -21,7 +21,7 @@ namespace VierzehnNothelfer.Droid
             //CHANGE COLOR OF STATUS BAR
             if (Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
             {
-                this.SetStatusBarColor(Android.Graphics.Color.Blue);
+                this.SetStatusBarColor(Android.Graphics.Color.Gray);
             }
 
         }

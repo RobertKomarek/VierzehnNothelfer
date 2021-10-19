@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:magic="http://magic.com/schemas/gradients"
+    xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
+    xmlns:view="clr-namespace:VierzehnNothelfer.Views"
+    xmlns:local="clr-namespace:VierzehnNothelferBackup.Models"
+    xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:trigger="clr-namespace:VierzehnNothelfer.Triggers"
+    xmlns:behavior="clr-namespace:Xamanimation.Behaviors;assembly=Xamanimation" xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms" xmlns:local1="clr-namespace:VierzehnNothelferBackup"
+    x:Class="VierzehnNothelfer.Views.NothelferPage"
+    x:DataType="vm:NothelferViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:NothelferViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+
+    <Grid>
+        <magic:GradientView
+            GradientSource="radial-gradient(circle at top center, rgb(235, 235, 235) 0%, rgb(235, 235, 235) 10%,rgb(229, 229, 229) 10%, rgb(229, 229, 229) 19%,rgb(222, 222, 222) 19%, rgb(222, 222, 222) 22%,rgb(216, 216, 216) 22%, rgb(216, 216, 216) 24%,rgb(209, 209, 209) 24%, rgb(209, 209, 209) 63%,rgb(203, 203, 203) 63%, rgb(203, 203, 203) 75%,rgb(196, 196, 196) 75%, rgb(196, 196, 196) 100%)"/>
+        <!--<cards:SfCardLayout SwipeDirection="Left" HeightRequest="500" BackgroundColor="#F0F0F0">
+	        <cards:SfCardView BackgroundColor="Cyan">
+                <StackLayout>
+		            <Label Text="{Binding VierzehnNothelfer[0].Heiliger}" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"/>
+                    <Image Source="{Binding VierzehnNothelfer[0].Bild}" HeightRequest="450" />
+                    <Label Text="{Binding VierzehnNothelfer[0].Kurzbeschreibung}" />
+                </StackLayout>
+	        </cards:SfCardView>
+	        <cards:SfCardView BackgroundColor="Yellow">
+		         <StackLayout>
+		            <Label Text="{Binding VierzehnNothelfer[1].Heiliger}"/>
+                    <Image Source="{Binding VierzehnNothelfer[1].Bild}" HeightRequest="450" />
+                    <Label Text="{Binding VierzehnNothelfer[1].Kurzbeschreibung}"/>
+                </StackLayout>
+	        </cards:SfCardView>
+        </cards:SfCardLayout>-->
+
+        <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding VierzehnNothelfer}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="local:NothelferBackup">
+                    <Grid>
+                        <Label x:Name="lblHeiliger"
+                               x:DataType="local:NothelferBackup"
+                               Text="{Binding Heiliger}"
+                               HorizontalTextAlignment="Center"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               Margin="50">
+                        </Label>
+                        <pcv:PancakeView x:Name="pancakeView"
+                            BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"
+                            pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
+                            CornerRadius="20,20,0,0"
+                            Margin="10,200,10,0"
+                            HeightRequest="1000">
+                            <pcv:PancakeView.BackgroundGradientStops>
+                                <pcv:GradientStopCollection>
+                                    <pcv:GradientStop Color="{Binding Hintergrundfarbe}" Offset="0" />
+                                    <pcv:GradientStop Color="Gray" Offset="0.5" />
+                                    <pcv:GradientStop Color="#D0D1D0" Offset="1.0" />
+                                </pcv:GradientStopCollection>
+                            </pcv:PancakeView.BackgroundGradientStops>
+                            <Label x:Name="lblKurzbeschreibung"
+                                x:DataType="local:NothelferBackup"
+                                FontSize="Large"
+                                TextColor="White"
+                                BackgroundColor="Transparent"
+                                VerticalTextAlignment="Start"
+                                HorizontalTextAlignment="Center"
+                                Margin="10,370,10,0"
+                                Text="{Binding Kurzbeschreibung}"   />
+                        </pcv:PancakeView>
+
+                        <Image x:Name="imgBild"
+                            x:DataType="local:NothelferBackup"
+                            Source="{Binding Bild}"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                            HeightRequest="450"
+                            Margin="0,100,0,0"/>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+         
+    </Grid>
+        </ContentPage.Content>
+</ContentPage>
