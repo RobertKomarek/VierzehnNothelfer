@@ -39,7 +39,7 @@
         </cards:SfCardLayout>-->
 
         <CarouselView x:Name="carouselView"
-                      ItemsSource="{Binding VierzehnNothelfer}">
+                      ItemsSource="{Binding NothelferCollection}">
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="local:NothelferBackup">
                     <Grid>
