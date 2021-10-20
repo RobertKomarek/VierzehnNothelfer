@@ -13,6 +13,7 @@ namespace VierzehnNothelfer.ViewModels
     public class NothelferViewModel : ContentPage
     {
         public ObservableCollection<NothelferBackup> NothelferCollection { get; set; }
+        public ObservableCollection<string> ListeNothilfen { get; set; }
         //public ObservableCollection<NothelferBackup> VierzehnNothelfer { get; set; }
         //public NothelferBackup MeineNothelfer { get; set; }
 
@@ -31,11 +32,12 @@ namespace VierzehnNothelfer.ViewModels
                     interimList = JsonConvert.DeserializeObject<List<NothelferBackup>>(jsonString);
                 }
             }
-
-            var distintHeilige = interimList.GroupBy(x => x.Heiliger).Select(x => x.First()).ToList();
-            NothelferCollection = new ObservableCollection<NothelferBackup>(distintHeilige);
-
-            
+            //FÜR DIE CAROUSELVIEW GRUPPIEREN UND DEN ERSTEN EINTRAG AUSWÄHLEN
+            var distinctHeilige = interimList.GroupBy(x => x.Heiliger).Select(x => x.First()).ToList();
+            NothelferCollection = new ObservableCollection<NothelferBackup>(distinctHeilige);
+            //FÜR DIE STARTSEITE ALLE NOTHILFEN AUSWÄHLEN UND ALPHA
+            var nurNothilfen = interimList.OrderBy(x => x.Nothilfe).Select(x => x.Nothilfe).ToList();
+            ListeNothilfen = new ObservableCollection<string>(nurNothilfen);
         }
            
             //MeineNothelfer = new NothelferBackup();

@@ -12,7 +12,8 @@ namespace VierzehnNothelfer
             InitializeComponent();
 
             //MainPage = new NavigationPage(new NothelferPage());
-            MainPage = new NothelferPage();
+            //MainPage = new NothelferPage();
+            MainPage = new StartPage();
 
         }
 

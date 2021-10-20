@@ -18,5 +18,6 @@ namespace VierzehnNothelfer.Views
             //Ohne Zurück-Button:
             await Navigation.PushModalAsync(new NothelferPage());
         }
+        
     }
 }

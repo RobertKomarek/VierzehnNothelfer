@@ -32,6 +32,10 @@
     <None Remove="Resources\" />
     <None Remove="Resources\14Nothelfer.json" />
     <None Remove="Newtonsoft.Json" />
+    <None Remove="Fontawesome\" />
+    <None Remove="Fontawesome\FontAwesome5Brands.otf" />
+    <None Remove="Fontawesome\FontAwesome5Regular.otf" />
+    <None Remove="Fontawesome\FontAwesome5Solid.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -40,8 +44,12 @@
     <Folder Include="Triggers\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Resources\" />
+    <Folder Include="Fontawesome\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\14Nothelfer.json" />
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Brands.otf" />
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Fontawesome\FontAwesome5Solid.otf" />
   </ItemGroup>
 </Project>
