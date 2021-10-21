@@ -120,6 +120,28 @@
     <ImageAsset Include="Assets.xcassets\StAchatius.imageset\StAchatius.png" />
     <ImageAsset Include="Assets.xcassets\StVitus.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\StVitus.imageset\StVitus.png" />
+    <ImageAsset Include="Assets.xcassets\StCyriakus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StCyriakus.imageset\StCyriakus.png" />
+    <ImageAsset Include="Assets.xcassets\StEgydius.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StEgydius.imageset\StEgydius.png" />
+    <ImageAsset Include="Assets.xcassets\StBarbara.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StBarbara.imageset\StBarbara.png" />
+    <ImageAsset Include="Assets.xcassets\StBlasius.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StBlasius.imageset\StBlasius.png" />
+    <ImageAsset Include="Assets.xcassets\StChristophorus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StChristophorus.imageset\StChristophorus.png" />
+    <ImageAsset Include="Assets.xcassets\StDionysius.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StDionysius.imageset\StDionysius.png" />
+    <ImageAsset Include="Assets.xcassets\StErasmus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StErasmus.imageset\StErasmus.png" />
+    <ImageAsset Include="Assets.xcassets\StGeorg.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StGeorg.imageset\StGeorg.png" />
+    <ImageAsset Include="Assets.xcassets\StMargareta.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StMargareta.imageset\StMargareta.png" />
+    <ImageAsset Include="Assets.xcassets\StPantaleon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StPantaleon.imageset\StPantaleon.png" />
+    <ImageAsset Include="Assets.xcassets\StEustachius.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StEustachius.imageset\StEustachius.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -147,6 +169,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>19.3.0.46</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -159,5 +184,16 @@
     <Folder Include="Assets.xcassets\StCatarina.imageset\" />
     <Folder Include="Assets.xcassets\StAchatius.imageset\" />
     <Folder Include="Assets.xcassets\StVitus.imageset\" />
+    <Folder Include="Assets.xcassets\StCyriakus.imageset\" />
+    <Folder Include="Assets.xcassets\StEgydius.imageset\" />
+    <Folder Include="Assets.xcassets\StBarbara.imageset\" />
+    <Folder Include="Assets.xcassets\StBlasius.imageset\" />
+    <Folder Include="Assets.xcassets\StChristophorus.imageset\" />
+    <Folder Include="Assets.xcassets\StDionysius.imageset\" />
+    <Folder Include="Assets.xcassets\StErasmus.imageset\" />
+    <Folder Include="Assets.xcassets\StGeorg.imageset\" />
+    <Folder Include="Assets.xcassets\StMargareta.imageset\" />
+    <Folder Include="Assets.xcassets\StPantaleon.imageset\" />
+    <Folder Include="Assets.xcassets\StEustachius.imageset\" />
   </ItemGroup>
 </Project>

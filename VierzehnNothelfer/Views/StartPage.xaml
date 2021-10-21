@@ -3,31 +3,67 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
-    xmlns:model="clr-namespace:VierzehnNothelferBackup.Models"
-    x:Class="VierzehnNothelfer.Views.StartPage">
+    xmlns:model="clr-namespace:VierzehnNothelfer.Models"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
+    xmlns:gradient="http://magic.com/schemas/gradients"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="VierzehnNothelfer.Views.StartPage"
+    x:DataType="vm:NothelferViewModel">
 
     <ContentPage.BindingContext>
         <vm:NothelferViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
+    <Grid>
+        <gradient:GradientView GradientSource="radial-gradient(circle at 64% 7%, rgba(55, 55, 55,0.06) 0%, rgba(55, 55, 55,0.06) 50%,rgba(228, 228, 228,0.06) 50%, rgba(228, 228, 228,0.06) 100%),radial-gradient(circle at 71% 6%, rgba(182, 182, 182,0.06) 0%, rgba(182, 182, 182,0.06) 50%,rgba(86, 86, 86,0.06) 50%, rgba(86, 86, 86,0.06) 100%),radial-gradient(circle at 94% 76%, rgba(158, 158, 158,0.06) 0%, rgba(158, 158, 158,0.06) 50%,rgba(76, 76, 76,0.06) 50%, rgba(76, 76, 76,0.06) 100%),linear-gradient(90deg, rgb(250, 250, 250),rgb(220, 220, 220))" />
         <StackLayout>
-            <CollectionView ItemsSource="{Binding ListeNothilfen}"
-                            ItemsLayout="VerticalGrid, 2">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="A" BackgroundColor="Red" VerticalTextAlignment="Center" />
-                                <Label Text="{Binding .}" FontSize="Large" VerticalTextAlignment="Center" />
-                            </StackLayout>
-                            <BoxView HeightRequest="0.7" Color="LightGray"/>
+            <ScrollView>
+                <StackLayout>
+                        <StackLayout Spacing="15" Padding="15">
+                            <Label Grid.Row="0" Grid.RowSpan="1"
+                                   Text="{Binding ListeNothilfen[0].Lied}"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Large"
+                                   TextColor="Black"
+                                   FontFamily="OS-B"/>
+                            <Image Source="vierzehnnothelferstartpic" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding ListeNothilfen[21].Lied}"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Large" TextColor="Black"
+                                   FontFamily="OS-B"/>
                         </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
 
-            </CollectionView>
-            <Button Text="Zu den Nothelfern" Clicked="Button_Clicked" Margin="10,0,10,10" />
+                    <BoxView HeightRequest="0.7" Color="Gray" Margin="5,0,5,0" />
+
+                    <CollectionView ItemsSource="{Binding ListeNothilfen}"
+                                    ItemsLayout="VerticalGrid">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="model:NothelferBackup">
+                                <StackLayout Padding="5">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Gruppe}"
+                                                BackgroundColor="{Binding Gruppenfarbe}"
+                                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                                FontAttributes="Bold" FontSize="Large" TextDecorations="Underline"
+                                                WidthRequest="50"
+                                                TextColor="White"/>
+                                        <Label Text="{Binding Nothilfe}" FontSize="Large" VerticalTextAlignment="Center"
+                                                TextColor="Black"/>
+                                        <Label Text="{Static fontawesome:FontAwesomeIcons.ArrowAltCircleRight}" FontFamily="FA-S"
+                                                TextColor="{Binding Gruppenfarbe}" HorizontalOptions="EndAndExpand"
+                                                FontSize="32" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                    <BoxView HeightRequest="0.7" Color="LightGray"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+            <Button Text="Zu den Nothelfern" Clicked="Button_Clicked"
+                    Margin="15,15,15,20"
+                    BackgroundColor="White"/>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

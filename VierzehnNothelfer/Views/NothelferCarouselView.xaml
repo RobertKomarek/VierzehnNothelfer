@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
-    xmlns:local="clr-namespace:VierzehnNothelferBackup.Models"
+    xmlns:local="clr-namespace:VierzehnNothelfer.Models"
     x:Class="VierzehnNothelfer.Views.NothelferCarouselView"
     x:DataType="vm:NothelferViewModel">
 

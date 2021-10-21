@@ -5,7 +5,7 @@
     xmlns:magic="http://magic.com/schemas/gradients"
     xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
     xmlns:view="clr-namespace:VierzehnNothelfer.Views"
-    xmlns:local="clr-namespace:VierzehnNothelferBackup.Models"
+    xmlns:local="clr-namespace:VierzehnNothelfer.Models"
     xmlns:pcv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:fontawesome="clr-namespace:FontAwesome"
     xmlns:trigger="clr-namespace:VierzehnNothelfer.Triggers"
@@ -57,7 +57,7 @@
                             <pcv:PancakeView x:Name="pancakeView"
                                 BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"
                                 pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
-                                CornerRadius="20,20,0,0"
+                                CornerRadius="20,20,20,20"
                                 Margin="10,200,10,0"
                                 HeightRequest="1000">
                                 <pcv:PancakeView.BackgroundGradientStops>

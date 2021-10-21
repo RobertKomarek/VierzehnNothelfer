@@ -4,5 +4,13 @@
              x:Class="VierzehnNothelfer.App">
     <Application.Resources>
 
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="LightGray"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="BorderColor" Value="DarkGray"/>
+            <Setter Property="BorderWidth" Value="1"/>
+        </Style>
+
     </Application.Resources>
 </Application>

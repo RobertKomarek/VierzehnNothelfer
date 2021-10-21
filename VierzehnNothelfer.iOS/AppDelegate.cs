@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
 using UIKit;
 
 namespace VierzehnNothelfer.iOS
@@ -24,6 +25,7 @@ namespace VierzehnNothelfer.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
+            SfListViewRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
