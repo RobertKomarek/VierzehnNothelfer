@@ -142,6 +142,8 @@
     <ImageAsset Include="Assets.xcassets\StPantaleon.imageset\StPantaleon.png" />
     <ImageAsset Include="Assets.xcassets\StEustachius.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\StEustachius.imageset\StEustachius.png" />
+    <ImageAsset Include="Assets.xcassets\vierzehnnothelferstartpic.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\vierzehnnothelferstartpic.imageset\vierzehnnothelferstartpic.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -195,5 +197,6 @@
     <Folder Include="Assets.xcassets\StMargareta.imageset\" />
     <Folder Include="Assets.xcassets\StPantaleon.imageset\" />
     <Folder Include="Assets.xcassets\StEustachius.imageset\" />
+    <Folder Include="Assets.xcassets\vierzehnnothelferstartpic.imageset\" />
   </ItemGroup>
 </Project>

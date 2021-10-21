@@ -19431,19 +19431,55 @@ namespace VierzehnNothelfer.Droid
 			public const int StAchatius = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int StCatarina = 2131165360;
+			public const int StBarbara = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int StVitus = 2131165361;
+			public const int StBlasius = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int test_custom_background = 2131165362;
+			public const int StCatarina = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int tooltip_frame_dark = 2131165363;
+			public const int StChristophorus = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int tooltip_frame_light = 2131165364;
+			public const int StCyriakus = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int StDionysius = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int StEgydius = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int StErasmus = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int StEustachius = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int StGeorg = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int StMargareta = 2131165370;
+			
+			// aapt resource value: 0x7F0700BB
+			public const int StPantaleon = 2131165371;
+			
+			// aapt resource value: 0x7F0700BC
+			public const int StVitus = 2131165372;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int test_custom_background = 2131165373;
+			
+			// aapt resource value: 0x7F0700BE
+			public const int tooltip_frame_dark = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int tooltip_frame_light = 2131165375;
+			
+			// aapt resource value: 0x7F0700C0
+			public const int vierzehnnothelferstartpic = 2131165376;
 			
 			static Drawable()
 			{

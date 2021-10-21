@@ -40,6 +40,10 @@
     <None Remove="Syncfusion.Xamarin.SfListView" />
     <None Remove="Fonts\" />
     <None Remove="Fonts\OldStandardBold.ttf" />
+    <None Remove="Fonts\SansitaOne.ttf" />
+    <None Remove="Fonts\LibreBaskerville-Bold.ttf" />
+    <None Remove="Fonts\LibreBaskerville-Italic.ttf" />
+    <None Remove="Fonts\LibreBaskerville-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -57,5 +61,9 @@
     <EmbeddedResource Include="Fontawesome\FontAwesome5Regular.otf" />
     <EmbeddedResource Include="Fontawesome\FontAwesome5Solid.otf" />
     <EmbeddedResource Include="Fonts\OldStandardBold.ttf" />
+    <EmbeddedResource Include="Fonts\SansitaOne.ttf" />
+    <EmbeddedResource Include="Fonts\LibreBaskerville-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\LibreBaskerville-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\LibreBaskerville-Regular.ttf" />
   </ItemGroup>
 </Project>

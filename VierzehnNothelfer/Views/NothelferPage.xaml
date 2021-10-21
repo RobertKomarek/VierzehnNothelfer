@@ -50,9 +50,9 @@
                                    x:DataType="local:NothelferBackup"
                                    Text="{Binding Heiliger}"
                                    HorizontalTextAlignment="Center"
-                                   FontSize="24"
-                                   FontAttributes="Bold"
-                                   Margin="50">
+                                   FontSize="26"
+                                   FontFamily="LB-B"
+                                   Margin="0,50,0,0">
                             </Label>
                             <pcv:PancakeView x:Name="pancakeView"
                                 BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"

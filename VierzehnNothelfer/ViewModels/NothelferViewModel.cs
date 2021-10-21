@@ -14,13 +14,13 @@ namespace VierzehnNothelfer.ViewModels
     {
         public ObservableCollection<NothelferBackup> NothelferCollection { get; set; }
         public ObservableCollection<NothelferBackup> ListeNothilfen { get; set; }
-        //public ObservableCollection<NothelferBackup> VierzehnNothelfer { get; set; }
-        //public NothelferBackup MeineNothelfer { get; set; }
+        //public Command<string> ZumHeiligenCommand { get; set; }
 
         public NothelferViewModel()
         {
-            var interimList = new List<NothelferBackup>();
+            //ZumHeiligenCommand = new Command<string>(ZumHeiligen);
 
+            var interimList = new List<NothelferBackup>();
             var assembly = typeof(NothelferViewModel).GetTypeInfo().Assembly;
             Stream stream = assembly.GetManifestResourceStream("VierzehnNothelfer.Resources.14Nothelfer.json");
 
@@ -38,11 +38,20 @@ namespace VierzehnNothelfer.ViewModels
             //FÜR DIE STARTSEITE ALLE NOTHILFEN, GRUPPEN UND GRUPPENFARBEN AUSWÄHLEN
             var interimListeNothilfen = interimList.OrderBy(x => x.Gruppe).ToList();
             ListeNothilfen = new ObservableCollection<NothelferBackup>(interimListeNothilfen);
-            //var nurNothilfen = interimList.OrderBy(x => x.Nothilfe).Select(x => x.Nothilfe).ToList();
-            //ListeNothilfen = new ObservableCollection<Anliegen>(nurNothilfen);
         }
-           
-            //MeineNothelfer = new NothelferBackup();
-            //VierzehnNothelfer = new ObservableCollection<NothelferBackup>(MeineNothelfer.NothelferBackupListe());
+
+        //private void ZumHeiligen(string heiliger)
+        //{
+        //    App.Current.MainPage.DisplayAlert("Info", "TEST", "OK");
+
+        //    switch (heiliger)
+        //    {
+        //        case "Heiliger Achatius":
+
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
     }
 }

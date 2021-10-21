@@ -17,26 +17,56 @@
     <Grid>
         <gradient:GradientView GradientSource="radial-gradient(circle at 64% 7%, rgba(55, 55, 55,0.06) 0%, rgba(55, 55, 55,0.06) 50%,rgba(228, 228, 228,0.06) 50%, rgba(228, 228, 228,0.06) 100%),radial-gradient(circle at 71% 6%, rgba(182, 182, 182,0.06) 0%, rgba(182, 182, 182,0.06) 50%,rgba(86, 86, 86,0.06) 50%, rgba(86, 86, 86,0.06) 100%),radial-gradient(circle at 94% 76%, rgba(158, 158, 158,0.06) 0%, rgba(158, 158, 158,0.06) 50%,rgba(76, 76, 76,0.06) 50%, rgba(76, 76, 76,0.06) 100%),linear-gradient(90deg, rgb(250, 250, 250),rgb(220, 220, 220))" />
         <StackLayout>
-            <ScrollView>
+            <Label Text="14 Nothelfer"
+                   FontSize="30"
+                   Margin="0,0,0,-10"
+                   HeightRequest="{OnPlatform Android=140, iOS=170}"
+                   FontFamily="LB-B"
+                   VerticalTextAlignment="End"
+                   HorizontalTextAlignment="End"
+                   TextColor="DarkGray"
+                   CharacterSpacing="3">
+                <Label.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Darkgray" Offset="0.1" />
+                        <GradientStop Color="Black" Offset="1.0" />
+                    </LinearGradientBrush> 
+                </Label.Background>
+            </Label>
+            <ScrollView Margin="0,0,0,0">
                 <StackLayout>
-                        <StackLayout Spacing="15" Padding="15">
-                            <Label Grid.Row="0" Grid.RowSpan="1"
-                                   Text="{Binding ListeNothilfen[0].Lied}"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="Large"
-                                   TextColor="Black"
-                                   FontFamily="OS-B"/>
-                            <Image Source="vierzehnnothelferstartpic" HorizontalOptions="FillAndExpand" />
-                            <Label Text="{Binding ListeNothilfen[21].Lied}"
-                                   HorizontalTextAlignment="Center"
-                                   FontSize="Large" TextColor="Black"
-                                   FontFamily="OS-B"/>
-                        </StackLayout>
+                    <pancake:PancakeView Margin="-3,0,-3,0"
+                                         Border="{pancake:BorderMarkup Color=DarkGray, Thickness=3}">
+                        <Grid HeightRequest="400" >
+                            <Image Source="vierzehnnothelferstartpic"
+                                   Margin="0,-17,0,0"
+                                   Aspect="AspectFill" />
+                            <BoxView BackgroundColor="Black" Opacity="0.6" />
+                                <ScrollView>
+                                <StackLayout Spacing="20" Padding="20" VerticalOptions="Center" >
+                                    <Label Grid.Row="0" Grid.RowSpan="1"
+                                           Text="{Binding ListeNothilfen[0].Lied}"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="25"
+                                           TextColor="LightYellow"
+                                           FontFamily="LB-R"
+                                           CharacterSpacing="1"/>
+                                    <Label Text="{Binding ListeNothilfen[21].Lied}"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="19"
+                                           TextColor="LightCyan"
+                                           CharacterSpacing="2"
+                                           FontFamily="LB-I"/>
+                                </StackLayout>
+                            </ScrollView>
+                        </Grid>
+                    </pancake:PancakeView>
 
-                    <BoxView HeightRequest="0.7" Color="Gray" Margin="5,0,5,0" />
+                    <!--<BoxView HeightRequest="0.7" Color="Gray" Margin="0,5,0,0" />-->
 
                     <CollectionView ItemsSource="{Binding ListeNothilfen}"
-                                    ItemsLayout="VerticalGrid">
+                                    ItemsLayout="VerticalGrid"
+                                    Margin="0,15,0,0">
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="model:NothelferBackup">
                                 <StackLayout Padding="5">
@@ -46,18 +76,38 @@
                                                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                                                 FontAttributes="Bold" FontSize="Large" TextDecorations="Underline"
                                                 WidthRequest="50"
-                                                TextColor="White"/>
+                                                TextColor="White">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    CommandParameter="{Binding Heiliger}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
                                         <Label Text="{Binding Nothilfe}" FontSize="Large" VerticalTextAlignment="Center"
-                                                TextColor="Black"/>
+                                                TextColor="Black">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    CommandParameter="{Binding Heiliger}"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
                                         <Label Text="{Static fontawesome:FontAwesomeIcons.ArrowAltCircleRight}" FontFamily="FA-S"
                                                 TextColor="{Binding Gruppenfarbe}" HorizontalOptions="EndAndExpand"
-                                                FontSize="32" Margin="0,0,15,0"/>
+                                                FontSize="32" Margin="0,0,15,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    CommandParameter="{Binding Heiliger}"/>
+                                            </Label.GestureRecognizers>
+
+                                            <!--Command="{Binding Source={RelativeSource AncestorType={x:Type vm:NothelferViewModel}}, Path=ZumHeiligenCommand}"-->
+
+                                        </Label>
                                     </StackLayout>
                                     <BoxView HeightRequest="0.7" Color="LightGray"/>
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
-
                     </CollectionView>
                 </StackLayout>
             </ScrollView>

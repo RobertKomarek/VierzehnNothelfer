@@ -11,3 +11,8 @@ using Xamarin.Forms.Xaml;
 
 //Eigenschaft:Embedded resource in Namespace\Resources. In XAML: FontFamily="Schwabacher" 
 [assembly: ExportFont("OldStandardBold.ttf", Alias = "OS-B")]
+[assembly: ExportFont("AlbertText-Bold.ttf", Alias = "AT-B")]
+[assembly: ExportFont("SansitaOne.ttf", Alias = "SO")]
+[assembly: ExportFont("LibreBaskerville-Bold.ttf", Alias = "LB-B")]
+[assembly: ExportFont("LibreBaskerville-Italic.ttf", Alias = "LB-I")]
+[assembly: ExportFont("LibreBaskerville-Regular.ttf", Alias = "LB-R")]
