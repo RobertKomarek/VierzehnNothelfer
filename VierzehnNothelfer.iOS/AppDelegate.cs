@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using Syncfusion.ListView.XForms.iOS;
 using UIKit;
+using Xamarin.Forms;
 
 namespace VierzehnNothelfer.iOS
 {
@@ -24,6 +25,9 @@ namespace VierzehnNothelfer.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental" });
+
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
             SfListViewRenderer.Init();
             LoadApplication(new App());

@@ -79,7 +79,7 @@
                                                 TextColor="White">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
-                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
                                                     CommandParameter="{Binding Heiliger}"/>
                                             </Label.GestureRecognizers>
                                         </Label>
@@ -87,7 +87,7 @@
                                                 TextColor="Black">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
-                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
                                                     CommandParameter="{Binding Heiliger}"/>
                                             </Label.GestureRecognizers>
                                         </Label>
@@ -96,11 +96,9 @@
                                                 FontSize="32" Margin="0,0,15,0">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
-                                                    Command="{Binding ZumHeiligenCommand}"
+                                                    Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
                                                     CommandParameter="{Binding Heiliger}"/>
                                             </Label.GestureRecognizers>
-
-                                            <!--Command="{Binding Source={RelativeSource AncestorType={x:Type vm:NothelferViewModel}}, Path=ZumHeiligenCommand}"-->
 
                                         </Label>
                                     </StackLayout>

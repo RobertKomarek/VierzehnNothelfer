@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Xamarin.Forms;
 
 namespace VierzehnNothelfer.Droid
 {
@@ -13,6 +14,13 @@ namespace VierzehnNothelfer.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            Forms.SetFlags(new string[]
+            {
+                "Brush_Experimental", "CarouselView_Experimental", "DragAndDrop_Experimental", "Expander_Experimental",
+                "Markup_Experimental", "RadioButton_Experimental",
+                 "SwipeView_Experimental", "Shapes_Experimental", "Shell_UWP_Experimental"
+            });
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

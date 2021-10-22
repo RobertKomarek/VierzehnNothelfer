@@ -15,7 +15,6 @@ namespace VierzehnNothelfer.Views
         async protected override void OnAppearing()
         {
             base.OnAppearing();
-
             //await myImage.TranslateTo(0, 200, 500);
             //await stCatarinaImage.TranslateTo(0, 200, 500);
             //label.TranslateTo(0, -200, 500);
