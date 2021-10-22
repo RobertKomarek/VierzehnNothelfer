@@ -112,7 +112,7 @@
                 </StackLayout>
             </ScrollView>
             <Button Text="Zu den Nothelfern" Clicked="Button_Clicked"
-                    Margin="15,15,15,20"
+                    Margin="15,15,15,40"
                     BackgroundColor="White"/>
         </StackLayout>
     </Grid>

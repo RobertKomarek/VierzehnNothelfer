@@ -13,6 +13,7 @@ namespace VierzehnNothelfer
 
             //MainPage = new NavigationPage(new NothelferPage());
             //MainPage = new NothelferPage();
+            //MainPage = new NavigationPage(new StartPage());
             MainPage = new StartPage();
 
         }
