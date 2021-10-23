@@ -48,8 +48,7 @@
             <CarouselView x:Name="carouselView"
                           VerticalOptions="Center"
                           IndicatorView="indicatorView"
-                          ItemsSource="{Binding NothelferCollection}"
-                          Position="{Binding Position, Mode=TwoWay}">
+                          ItemsSource="{Binding NothelferCollection}">
                  <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -73,24 +72,25 @@
                                         <pcv:GradientStop Color="#D0D1D0" Offset="1.0" />
                                     </pcv:GradientStopCollection>
                                 </pcv:PancakeView.BackgroundGradientStops>
-
-                                <StackLayout Margin="10,260,10,0" Spacing="15" >
-                                    <Button Text="Zum Nothelfergebet" Margin="25,10,25,10"/>
-                                    <BoxView HeightRequest="0.7" Margin="30,-5,30,0" Color="{Binding Hintergrundfarbe}"/>
-                                    <ScrollView>
+                                <StackLayout Margin="10,260,10,0" Spacing="15"  >
+                                <!--<Button Text="Zum Nothelfergebet" Margin="25,10,25,10"/>-->
+                                <ScrollView>
+                                    <StackLayout Margin="30,15,30,0">
+                                        <BoxView HeightRequest="0.7" Color="{Binding Hintergrundfarbe}"/>
+                             
                                         <Label x:Name="lblKurzbeschreibung"
                                             FontSize="Medium"
                                             TextColor="White"
                                             BackgroundColor="Transparent"
-                                            VerticalTextAlignment="Start"
                                             HorizontalTextAlignment="Center"
-                                            Margin="45,0,45,0"
+                                            Margin="35,0,35,0"
                                             Text="{Binding Kurzbeschreibung}"/>
-                                    </ScrollView>
-                                 </StackLayout>
+                                        </StackLayout>
+                                </ScrollView>
+                                </StackLayout>
                             </pcv:PancakeView>
 
-                            <Image x:Name="imgBild"
+                            <Image  x:Name="imgBild"
                                 Source="{Binding Bild}"
                                 Aspect="AspectFit"
                                 HorizontalOptions="Center"
@@ -101,24 +101,23 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
-                         Spacing="55"
-                         Margin="0,0,0,15">
+                         Margin="0,-95,0,0">
                 <IndicatorView x:Name="indicatorView"
-                        IndicatorColor="Gray"
-                        SelectedIndicatorColor="Red"
-                        HorizontalOptions="Center"/>
+                    IndicatorColor="Gray"
+                    SelectedIndicatorColor="Red"
+                    HorizontalOptions="Center" />
                 <Button Text="{Static fontawesome:FontAwesomeIcons.Home}"
-                        FontFamily="FA-S"
-                        FontSize="Large"
-                        HeightRequest="50"
-                        WidthRequest="50"
-                        CornerRadius="25"
-                        Clicked="Button_Clicked"/>
+                    FontFamily="FA-S"
+                    FontSize="Large"
+                    HorizontalOptions="End"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    CornerRadius="25"
+                    Margin="45,0,0,0"
+                    Clicked="Button_Clicked"/>
             </StackLayout>
-
         </StackLayout>
     </Grid>
 

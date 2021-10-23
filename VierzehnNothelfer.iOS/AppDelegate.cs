@@ -26,7 +26,7 @@ namespace VierzehnNothelfer.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental" });
+            //Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental" });
 
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
             SfListViewRenderer.Init();

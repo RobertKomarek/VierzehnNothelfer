@@ -15,12 +15,12 @@ namespace VierzehnNothelfer.Droid
         {
             base.OnCreate(savedInstanceState);
 
-            Forms.SetFlags(new string[]
-            {
-                "Brush_Experimental", "CarouselView_Experimental", "DragAndDrop_Experimental", "Expander_Experimental",
-                "Markup_Experimental", "RadioButton_Experimental",
-                 "SwipeView_Experimental", "Shapes_Experimental", "Shell_UWP_Experimental"
-            });
+            //Forms.SetFlags(new string[]
+            //{
+            //    "Brush_Experimental", "CarouselView_Experimental", "DragAndDrop_Experimental", "Expander_Experimental",
+            //    "Markup_Experimental", "RadioButton_Experimental",
+            //     "SwipeView_Experimental", "Shapes_Experimental", "Shell_UWP_Experimental"
+            //});
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
