@@ -15,6 +15,7 @@ namespace VierzehnNothelfer
             //MainPage = new NothelferPage();
             //MainPage = new NavigationPage(new StartPage());
             MainPage = new StartPage();
+            //MainPage = new NothilfeGebetPage();
 
         }
 

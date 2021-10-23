@@ -9,11 +9,20 @@ namespace VierzehnNothelfer.Views
 {
     public partial class NothilfeGebetPage : ContentPage
     {
+        public ObservableCollection<NothelferBackup> Nothelfer { get; set; }
 
         public NothilfeGebetPage(ObservableCollection<NothelferBackup> nothelfer)
         {
             InitializeComponent();
-            listView.ItemsSource = nothelfer;
+            Nothelfer = new ObservableCollection<NothelferBackup>(nothelfer);
+
+            //listView.ItemsSource = nothelfer;
+            this.BindingContext = this;
+        }
+
+        public NothilfeGebetPage()
+        {
+
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
