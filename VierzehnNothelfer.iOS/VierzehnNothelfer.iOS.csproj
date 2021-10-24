@@ -115,7 +115,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\StCatarina.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\StCatarina.imageset\StCatarina-1.png" />
     <ImageAsset Include="Assets.xcassets\StAchatius.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\StAchatius.imageset\StAchatius.png" />
     <ImageAsset Include="Assets.xcassets\StVitus.imageset\Contents.json" />
@@ -123,7 +122,6 @@
     <ImageAsset Include="Assets.xcassets\StCyriakus.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\StCyriakus.imageset\StCyriakus.png" />
     <ImageAsset Include="Assets.xcassets\StEgydius.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\StEgydius.imageset\StEgydius.png" />
     <ImageAsset Include="Assets.xcassets\StBarbara.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\StBarbara.imageset\StBarbara.png" />
     <ImageAsset Include="Assets.xcassets\StBlasius.imageset\Contents.json" />
@@ -144,6 +142,8 @@
     <ImageAsset Include="Assets.xcassets\StEustachius.imageset\StEustachius.png" />
     <ImageAsset Include="Assets.xcassets\vierzehnnothelferstartpic.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\vierzehnnothelferstartpic.imageset\vierzehnnothelferstartpic.png" />
+    <ImageAsset Include="Assets.xcassets\StCatarina.imageset\StCatarina.png" />
+    <ImageAsset Include="Assets.xcassets\StEgydius.imageset\StEgydius-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

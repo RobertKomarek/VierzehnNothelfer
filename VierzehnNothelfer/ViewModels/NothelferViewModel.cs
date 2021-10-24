@@ -187,7 +187,7 @@ namespace VierzehnNothelfer.ViewModels
                         }
                     };
                     break;
-                case "Heiliger Katharina":
+                case "Heilige Katharina":
                     Nothilfe = new ObservableCollection<NothelferBackup>
                     {
                         new NothelferBackup
@@ -200,7 +200,7 @@ namespace VierzehnNothelfer.ViewModels
                         }
                     };
                     break;
-                case "Heiliger Margareta":
+                case "Heilige Margareta":
                     Nothilfe = new ObservableCollection<NothelferBackup>
                     {
                         new NothelferBackup

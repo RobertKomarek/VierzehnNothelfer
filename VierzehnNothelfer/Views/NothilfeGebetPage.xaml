@@ -13,113 +13,68 @@
     Visual="Material"
     x:DataType="local:NothilfeGebetPage">
 
-    <ContentPage.Content>
-
     <Grid>
-        <magic:GradientView
+        <magic:GradientView  
             GradientSource="radial-gradient(circle at top center, rgb(235, 235, 235) 0%, rgb(235, 235, 235) 10%,rgb(229, 229, 229) 10%, rgb(229, 229, 229) 19%,rgb(222, 222, 222) 19%, rgb(222, 222, 222) 22%,rgb(216, 216, 216) 22%, rgb(216, 216, 216) 24%,rgb(209, 209, 209) 24%, rgb(209, 209, 209) 63%,rgb(203, 203, 203) 63%, rgb(203, 203, 203) 75%,rgb(196, 196, 196) 75%, rgb(196, 196, 196) 100%)"/>
 
-        <StackLayout Spacing="15">
-
-                 <Image Source="{Binding Nothelfer[0].Bild}"
-                        Aspect="AspectFill"
-                        VerticalOptions="Start"
-                        HeightRequest="250" WidthRequest="95"
-                        HorizontalOptions="Center"
-                        Margin="0,15,0,0" />
-                 <!--<pcv:PancakeView x:Name="pancakeView" Rotation="180"
-                    BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"
-                    pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
-                    CornerRadius="20,20,20,20"
-                    HeightRequest="200">
-                    <pcv:PancakeView.BackgroundGradientStops>
-                        <pcv:GradientStopCollection>
-                            <pcv:GradientStop Color="{Binding Nothelfer[0].Hintergrundfarbe}" Offset="0" />
-                            <pcv:GradientStop Color="Gray" Offset="0.5" />
-                            <pcv:GradientStop Color="#D0D1D0" Offset="1.0" />
-                        </pcv:GradientStopCollection>
-                    </pcv:PancakeView.BackgroundGradientStops>
-                 </pcv:PancakeView>-->
+        <ScrollView >
+            <StackLayout Spacing="15">
+                <Image Source="{Binding Nothelfer[0].Bild, TargetNullValue=StCatarina}"
+                    Aspect="AspectFit"
+                    VerticalOptions="Start"
+                    HeightRequest="250" WidthRequest="135"
+                    HorizontalOptions="Center"
+                    Margin="0,15,0,0" />
+                <!--<pcv:PancakeView x:Name="pancakeView" Rotation="180"
+                BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"
+                pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
+                CornerRadius="20,20,20,20"
+                HeightRequest="200">
+                <pcv:PancakeView.BackgroundGradientStops>
+                    <pcv:GradientStopCollection>
+                        <pcv:GradientStop Color="{Binding Nothelfer[0].Hintergrundfarbe}" Offset="0" />
+                        <pcv:GradientStop Color="Gray" Offset="0.5" />
+                        <pcv:GradientStop Color="#D0D1D0" Offset="1.0" />
+                    </pcv:GradientStopCollection>
+                </pcv:PancakeView.BackgroundGradientStops>
+                </pcv:PancakeView>-->
            
 
-            <Label Text="{Binding Nothelfer[0].Heiliger}" HorizontalOptions="Center" FontFamily="LB-B" FontSize="28" TextColor="Black" />
-            <Label Text="{Binding Nothelfer[0].Kurzbeschreibung}" FontSize="Medium" FontFamily="LB-I" HorizontalTextAlignment="Center"
-                   TextColor="Black"
-                   Margin="5"/>
-            <BoxView HeightRequest="0.7" Color="Black" Margin="5" />
-            <ScrollView>
-                <Label Text="{Binding Nothelfer[0].Nothelfergebet}"
-                       FontSize="Large"
-                       HorizontalTextAlignment="Center"
+                <Label Text="{Binding Nothelfer[0].Heiliger, TargetNullValue=Heilige Katharina}" HorizontalOptions="Center" FontFamily="LB-B" FontSize="28" TextColor="Black" />
+                <Label Text="{Binding Nothelfer[0].Kurzbeschreibung, TargetNullValue=Hier folgt die Kurzbeschreibung}" FontSize="Medium" FontFamily="LB-I" HorizontalTextAlignment="Center"
                        TextColor="Black"
                        Margin="5"/>
-            </ScrollView>
-        </StackLayout>
+                <BoxView HeightRequest="0.7" Color="Black" Margin="5" />
+                <Label Text="{Binding Nothelfer[0].Nothelfergebet, TargetNullValue=Hier folgt das Nothelfergebet}" 
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"
+                        Margin="3,3,3,50"/>
 
-        <!--<StackLayout VerticalOptions="CenterAndExpand" >
-            <ListView x:Name="listView">
-                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label x:Name="lblHeiliger"
-                                       Text="{Binding Heiliger}"
-                                       HorizontalTextAlignment="Center"
-                                       FontSize="26"
-                                       FontFamily="LB-B">
-                                </Label>
-                                <pcv:PancakeView x:Name="pancakeView"
-                                    BackgroundGradientStartPoint="0,1" BackgroundGradientEndPoint="0,0"
-                                    pcv:Border="{pcv:BorderMarkup Color=LightGray, Thickness=3}"
-                                    CornerRadius="20,20,20,20"
-                                    Margin="10,200,10,0"
-                                    HeightRequest="1000">
-                                    <pcv:PancakeView.BackgroundGradientStops>
-                                        <pcv:GradientStopCollection>
-                                            <pcv:GradientStop Color="{Binding Hintergrundfarbe}" Offset="0" />
-                                            <pcv:GradientStop Color="Gray" Offset="0.5" />
-                                            <pcv:GradientStop Color="#D0D1D0" Offset="1.0" />
-                                        </pcv:GradientStopCollection>
-                                    </pcv:PancakeView.BackgroundGradientStops>
-
-                                    <StackLayout Margin="10,260,10,0" Spacing="15" >
-                                        <Button Text="Zum Nothelfergebet"
-                                                Margin="25,10,25,10"/>
-                                        <BoxView HeightRequest="0.7"
-                                                 Margin="30,-5,30,0"
-                                                 Color="{Binding Hintergrundfarbe}"/>
-                                        <ScrollView>
-                                            <Label FontSize="Medium"
-                                                TextColor="White"
-                                                BackgroundColor="Transparent"
-                                                VerticalTextAlignment="Start"
-                                                HorizontalTextAlignment="Center"
-                                                Margin="45,0,45,0"
-                                                Text="{Binding Kurzbeschreibung}"/>
-                                        </ScrollView>
-                                     </StackLayout>
-                                </pcv:PancakeView>
-
-                                <Image Source="{Binding Bild}"
-                                    Aspect="AspectFill"
-                                    HorizontalOptions="Center"
-                                    HeightRequest="350"/>
-                                </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <StackLayout>
-                <Button Text="{Static fontawesome:FontAwesomeIcons.Home}"
-                    FontFamily="FA-S"
-                    FontSize="Large"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    CornerRadius="25"
-                    Clicked="Button_Clicked"/>
+                <!--<BoxView Opacity="0.9" HeightRequest="300">
+                     <BoxView.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="Green"
+                                        Offset="0.1"/>
+                            <GradientStop Color="{Binding Nothelfer[0].Hintergrundfarbe, TargetNullValue=Red}"
+                                        Offset="0.5" />
+                        </LinearGradientBrush>
+                     </BoxView.Background>
+                </BoxView>-->
             </StackLayout>
-        </StackLayout>-->
+        </ScrollView>
+
+        <Button Text="{Static fontawesome:FontAwesomeIcons.Home}"
+            BackgroundColor="White"
+            FontFamily="FA-S"
+            FontSize="Large"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            HeightRequest="60"
+            WidthRequest="60"
+            CornerRadius="30"
+            Margin="15"
+            Clicked="Button_Clicked"/>
     </Grid>
 
-    </ContentPage.Content>
 </ContentPage>
