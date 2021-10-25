@@ -49,7 +49,7 @@
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
                         TextColor="Black"
-                        Margin="3,3,3,50"/>
+                        Margin="3,3,3,65"/>
 
                 <!--<BoxView Opacity="0.9" HeightRequest="300">
                      <BoxView.Background>
@@ -74,6 +74,7 @@
             WidthRequest="60"
             CornerRadius="30"
             Margin="15"
+            Opacity="0.8"
             Clicked="Button_Clicked"/>
     </Grid>
 

@@ -45,6 +45,13 @@
         <!--Position="{Binding Source={RelativeSource AncestorType={x:Type vm:NothelferViewModel}}, Path=Position, Mode=TwoWay}"-->
 
         <StackLayout VerticalOptions="CenterAndExpand" >
+
+             <IndicatorView x:Name="indicatorView"
+                    IndicatorColor="Gray"
+                    SelectedIndicatorColor="Red"
+                    HorizontalOptions="Center"
+                    Margin="0,40,0,0"/>
+
             <CarouselView x:Name="carouselView"
                           VerticalOptions="Center"
                           IndicatorView="indicatorView"
@@ -83,7 +90,7 @@
                                             TextColor="White"
                                             BackgroundColor="Transparent"
                                             HorizontalTextAlignment="Center"
-                                            Margin="35,0,35,0"
+                                            Margin="35,0,35,60"
                                             Text="{Binding Kurzbeschreibung}"/>
                                         </StackLayout>
                                 </ScrollView>
@@ -101,23 +108,20 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-            <StackLayout Orientation="Horizontal"
+            <!--<StackLayout Orientation="Horizontal"
                          HorizontalOptions="Center"
                          Margin="0,-95,0,0">
-                <IndicatorView x:Name="indicatorView"
-                    IndicatorColor="Gray"
-                    SelectedIndicatorColor="Red"
-                    HorizontalOptions="Center" />
-                <Button Text="{Static fontawesome:FontAwesomeIcons.Home}"
+            </StackLayout>-->
+                <Button Text="{Static fontawesome:FontAwesomeIcons.Home}" Opacity="0.8"
                     FontFamily="FA-S"
                     FontSize="Large"
                     HorizontalOptions="End"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    CornerRadius="25"
-                    Margin="45,0,0,0"
+                    BackgroundColor="White"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    CornerRadius="30"
+                    Margin="0,-95,25,15"
                     Clicked="Button_Clicked"/>
-            </StackLayout>
         </StackLayout>
     </Grid>
 
