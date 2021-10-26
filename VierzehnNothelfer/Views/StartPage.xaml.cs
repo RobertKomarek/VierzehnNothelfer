@@ -19,6 +19,10 @@ namespace VierzehnNothelfer.Views
             //Ohne Zurück-Button:
             await Navigation.PushModalAsync(new NothelferPage());
         }
-        
+
+        async void Flag_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new EinstellungenPage());
+        }
     }
 }

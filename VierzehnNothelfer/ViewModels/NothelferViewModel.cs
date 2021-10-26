@@ -14,21 +14,34 @@ namespace VierzehnNothelfer.ViewModels
 {
     public class NothelferViewModel : BaseViewModel
     {
+        #region PROPERTIES & COMMANDS
         public ObservableCollection<NothelferBackup> NothelferCollection { get; set; }
+        public List<NothelferBackup> DistinctHeilige { get; set; }
+       
         public ObservableCollection<NothelferBackup> ListeNothilfen { get; set; }
+        public List<NothelferBackup> InterimListeNothilfen { get; set; }
 
         private ObservableCollection<NothelferBackup> _nothilfe;
         public ObservableCollection<NothelferBackup> Nothilfe
         {
             get { return _nothilfe; }
-            set { _nothilfe = value; OnPropertyChanged(); }
+            set { _nothilfe = value; }
         }
-       
+
         public Command<string> ZuMeinemHeiligenCommand { get; set; }
+        public Command<string> ChangeLanguageCommand { get; set; }
+        public Command StartPageAppearingCommand { get; set; }
+        #endregion
 
         public NothelferViewModel()
         {
+            #region CONSTRUCTOR PROPERTIES & COMMANDS
             ZuMeinemHeiligenCommand = new Command<string>(ZumHeiligen);
+            ChangeLanguageCommand = new Command<string>(ChangeLanguage);
+            StartPageAppearingCommand = new Command(StartPageAppearing);
+            #endregion
+
+            //ListeNothilfen = new ObservableCollection<NothelferBackup>();
 
             var interimList = new List<NothelferBackup>();
             var assembly = typeof(NothelferViewModel).GetTypeInfo().Assembly;
@@ -43,14 +56,61 @@ namespace VierzehnNothelfer.ViewModels
                 }
             }
             //FÜR DIE CAROUSELVIEW GRUPPIEREN UND DEN ERSTEN EINTRAG AUSWÄHLEN
-            var distinctHeilige = interimList.GroupBy(x => x.Heiliger).Select(x => x.First()).OrderBy(x => x.LfdNummer).ToList();
-            NothelferCollection = new ObservableCollection<NothelferBackup>(distinctHeilige);
+            DistinctHeilige = interimList.GroupBy(x => x.Heiliger).Select(x => x.First()).OrderBy(x => x.Heiliger).ToList();
+            NothelferCollection = new ObservableCollection<NothelferBackup>(DistinctHeilige);
             //FÜR DIE STARTSEITE ALLE NOTHILFEN, GRUPPEN UND GRUPPENFARBEN AUSWÄHLEN
-            var interimListeNothilfen = interimList.OrderBy(x => x.Gruppe).ToList();
-            ListeNothilfen = new ObservableCollection<NothelferBackup>(interimListeNothilfen);
-        }
-        
+            InterimListeNothilfen = interimList.OrderBy(x => x.Gruppe).ToList();
 
+            if (App.Current.Properties.ContainsKey("Spracheinstellungen"))
+            {
+                var sprachEinstellungen = Application.Current.Properties["Spracheinstellungen"].ToString();
+
+                switch (sprachEinstellungen)
+                {
+                    case "Deutsch":
+                        InterimListeNothilfen = InterimListeNothilfen.Where(x => x.Sprache == "Deutsch").ToList();
+                        ListeNothilfen = new ObservableCollection<NothelferBackup>(InterimListeNothilfen);
+                        //App.Current.MainPage.DisplayAlert("Einstellungen", "Sprache geändert auf Deutsch!", "OK");
+                        break;
+
+                    case "English":
+                        InterimListeNothilfen = InterimListeNothilfen.Where(x => x.Sprache == "English").ToList();
+                        ListeNothilfen = new ObservableCollection<NothelferBackup>(InterimListeNothilfen);
+                        //App.Current.MainPage.DisplayAlert("Settings", "Language changed to English!", "OK");
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                InterimListeNothilfen = InterimListeNothilfen.Where(x => x.Sprache == "Deutsch").ToList();
+                ListeNothilfen = new ObservableCollection<NothelferBackup>(InterimListeNothilfen);
+            }
+        }
+
+        private void StartPageAppearing()
+        {
+            //await App.Current.MainPage.DisplayAlert("Page appeared", "went all right", "OK");
+        }
+
+        private void ChangeLanguage(string language)
+        {
+            SetProperties("Spracheinstellungen", language);
+            App.Current.MainPage.DisplayAlert("Settings", $"Language changed to {language}!", "OK");
+            App.Current.MainPage = new StartPage();
+        }
+
+        public async static void SetProperties(string property, object value)
+        {
+            var app = (App)Application.Current;
+            app.Properties[property] = value;
+
+            await app.SavePropertiesAsync();
+        }
+
+        #region METHOS ZUMHEILIGEN - NOTHILFEGEBETPAGE.XAML
         private async void ZumHeiligen(string heiliger)
         {
             //App.Current.MainPage.DisplayAlert("Info", $"{heiliger}", "OK"
@@ -243,5 +303,6 @@ namespace VierzehnNothelfer.ViewModels
 
             await App.Current.MainPage.Navigation.PushModalAsync(new NothilfeGebetPage(Nothilfe));
         }
+        #endregion
     }
 }

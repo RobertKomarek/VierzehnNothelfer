@@ -1,7 +1,5 @@
 [
  {
-   "Nr": 1,
-   "LfdNummer": 1,
    "Heiliger": "Heiliger Achatius",
    "Kurzbeschreibung": "Achatius war Soldat und wurde wegen seines Glaubens im Jahr 138 gekreuzigt",
    "Bild": "StAchatius",
@@ -15,8 +13,6 @@
    "Gruppenfarbe": "Turquoise"
  },
  {
-   "Nr": 2,
-   "LfdNummer": 1,
    "Heiliger": "Heiliger Achatius",
    "Kurzbeschreibung": "Achatius war Soldat und wurde wegen seines Glaubens im Jahr 138 gekreuzigt",
    "Bild": "StAchatius",
@@ -30,8 +26,6 @@
    "Gruppenfarbe": "Red"
  },
  {
-   "Nr": 3,
-   "LfdNummer": 1,
    "Heiliger": "Heiliger Achatius",
    "Kurzbeschreibung": "Achatius war Soldat und wurde wegen seines Glaubens im Jahr 138 gekreuzigt",
    "Bild": "StAchatius",
@@ -45,10 +39,8 @@
    "Gruppenfarbe": "DarkSlateGray"
  },
  {
-   "Nr": 4,
-   "LfdNummer": 1,
    "Heiliger": "Heiliger Achatius",
-   "Kurzbeschreibung": "Achatius war Soldat und wurde wegen seines Glaubens im Jahr 138 gekreuzigt",
+   "Kurzbeschreibung": "Er zählt zu den drei Soldaten- und Ritterheiligen. Seine Heimat war Kappadozien. Als Hauptmann und Oberst “primicerius” des kaiserlichen Heeres aus Kappadozien erlitt er das Martyrium in der diokletianischen Verfolgung um 305",
    "Bild": "StAchatius",
    "Sprache": "Deutsch",
    "Gedenktag": "8.5.",
@@ -60,8 +52,6 @@
    "Gruppenfarbe": "DeepPink"
  },
  {
-   "Nr": 5,
-   "LfdNummer": 2,
    "Heiliger": "Heiliger Aegidius",
    "Kurzbeschreibung": "Ägidius war Benediktiner. Er starb 720 als Einsiedler in seinem Kloster in der Provence",
    "Bild": "StEgydius",
@@ -75,8 +65,6 @@
    "Gruppenfarbe": "Gray"
  },
  {
-   "Nr": 6,
-   "LfdNummer": 2,
    "Heiliger": "Heiliger Aegidius",
    "Kurzbeschreibung": "Ägidius war Benediktiner. Er starb 720 als Einsiedler in seinem Kloster in der Provence",
    "Bild": "StEgydius",
@@ -90,8 +78,6 @@
    "Gruppenfarbe": "DeepPink"
  },
  {
-   "Nr": 7,
-   "LfdNummer": 3,
    "Heiliger": "Heilige Barbara",
    "Kurzbeschreibung": "Barbara wurde von ihrem Vater in einem Turm gefangen gehalten und 306 getötet, weil sie sich zu Christus bekannte",
    "Bild": "StBarbara",
@@ -105,8 +91,6 @@
    "Gruppenfarbe": "Gray"
  },
  {
-   "Nr": 8,
-   "LfdNummer": 4,
    "Heiliger": "Heiliger Blasius",
    "Kurzbeschreibung": "Blasius hat einen Jungen vor dem Ersticken durch Fischgräten gerettet. Er war Bischof und wurde während der Christenverfolgung um 316 unter Diokletian hingerichtet",
    "Bild": "StBlasius",
@@ -120,8 +104,6 @@
    "Gruppenfarbe": "Green"
  },
  {
-   "Nr": 9,
-   "LfdNummer": 4,
    "Heiliger": "Heiliger Blasius",
    "Kurzbeschreibung": "Blasius hat einen Jungen vor dem Ersticken durch Fischgräten gerettet. Er war Bischof und wurde während der Christenverfolgung um 316 unter Diokletian hingerichtet",
    "Bild": "StBlasius",
@@ -135,8 +117,6 @@
    "Gruppenfarbe": "Green"
  },
  {
-   "Nr": 10,
-   "LfdNummer": 4,
    "Heiliger": "Heiliger Blasius",
    "Kurzbeschreibung": "Blasius hat einen Jungen vor dem Ersticken durch Fischgräten gerettet. Er war Bischof und wurde während der Christenverfolgung um 316 unter Diokletian hingerichtet",
    "Bild": "StBlasius",
@@ -150,8 +130,6 @@
    "Gruppenfarbe": "Blue"
  },
  {
-   "Nr": 11,
-   "LfdNummer": 5,
    "Heiliger": "Heiliger Christophorus",
    "Kurzbeschreibung": "Christophorus trug ein Kind über den Fluss, das sich als Christus zu erkennen gab und ihn taufte. Er starb im Jahr 250 als Märtyrer",
    "Bild": "StChristophorus",
@@ -165,8 +143,6 @@
    "Gruppenfarbe": "YellowGreen"
  },
  {
-   "Nr": 12,
-   "LfdNummer": 5,
    "Heiliger": "Heiliger Christophorus",
    "Kurzbeschreibung": "Christophorus trug ein Kind über den Fluss, das sich als Christus zu erkennen gab und ihn taufte. Er starb im Jahr 250 als Märtyrer",
    "Bild": "StChristophorus",
@@ -180,8 +156,6 @@
    "Gruppenfarbe": "BlueViolet"
  },
  {
-   "Nr": 13,
-   "LfdNummer": 5,
    "Heiliger": "Heiliger Christophorus",
    "Kurzbeschreibung": "Christophorus trug ein Kind über den Fluss, das sich als Christus zu erkennen gab und ihn taufte. Er starb im Jahr 250 als Märtyrer",
    "Bild": "StChristophorus",
@@ -195,8 +169,6 @@
    "Gruppenfarbe": "Gray"
  },
  {
-   "Nr": 14,
-   "LfdNummer": 6,
    "Heiliger": "Heiliger Cyriakus",
    "Kurzbeschreibung": "Cyriakus wurde nach jahrelanger Fronarbeit in den Lehmgruben Roms im Jahr 304 ermordet",
    "Bild": "StCyriakus",
@@ -210,8 +182,6 @@
    "Gruppenfarbe": "DeepPink"
  },
  {
-   "Nr": 15,
-   "LfdNummer": 7,
    "Heiliger": "Heiliger Dionysius",
    "Kurzbeschreibung": "Dionysius, erster Bischof von Paris, wurde im Jahr 258 enthauptet",
    "Bild": "StDionysius",
@@ -225,8 +195,6 @@
    "Gruppenfarbe": "DarkGoldenrod"
  },
  {
-   "Nr": 16,
-   "LfdNummer": 7,
    "Heiliger": "Heiliger Dionysius",
    "Kurzbeschreibung": "Dionysius, erster Bischof von Paris, wurde im Jahr 258 enthauptet",
    "Bild": "StDionysius",
@@ -240,8 +208,6 @@
    "Gruppenfarbe": "Turquoise"
  },
  {
-   "Nr": 17,
-   "LfdNummer": 7,
    "Heiliger": "Heiliger Dionysius",
    "Kurzbeschreibung": "Dionysius, erster Bischof von Paris, wurde im Jahr 258 enthauptet",
    "Bild": "StDionysius",
@@ -255,8 +221,6 @@
    "Gruppenfarbe": "Green"
  },
  {
-   "Nr": 18,
-   "LfdNummer": 7,
    "Heiliger": "Heiliger Dionysius",
    "Kurzbeschreibung": "Dionysius, erster Bischof von Paris, wurde im Jahr 258 enthauptet",
    "Bild": "StDionysius",
@@ -270,8 +234,6 @@
    "Gruppenfarbe": "DarkOrange"
  },
  {
-   "Nr": 19,
-   "LfdNummer": 8,
    "Heiliger": "Heiliger Erasmus",
    "Kurzbeschreibung": "Erasmus, Bischof von Antiochien, starb um 310 den Märtyrertod. Ihm wurden bei lebendigem Leib die Gedärme herausgezogen",
    "Bild": "StErasmus",
@@ -285,8 +247,6 @@
    "Gruppenfarbe": "BlueViolet"
  },
  {
-   "Nr": 20,
-   "LfdNummer": 8,
    "Heiliger": "Heiliger Erasmus",
    "Kurzbeschreibung": "Erasmus, Bischof von Antiochien, starb um 310 den Märtyrertod. Ihm wurden bei lebendigem Leib die Gedärme herausgezogen",
    "Bild": "StErasmus",
@@ -300,8 +260,6 @@
    "Gruppenfarbe": "DarkGoldenrod"
  },
  {
-   "Nr": 21,
-   "LfdNummer": 8,
    "Heiliger": "Heiliger Erasmus",
    "Kurzbeschreibung": "Erasmus, Bischof von Antiochien, starb um 310 den Märtyrertod. Ihm wurden bei lebendigem Leib die Gedärme herausgezogen",
    "Bild": "StErasmus",
@@ -315,8 +273,6 @@
    "Gruppenfarbe": "DarkOrange"
  },
  {
-   "Nr": 22,
-   "LfdNummer": 9,
    "Heiliger": "Heiliger Eustachius",
    "Kurzbeschreibung": "Eustachius hatte eine Erscheinung und sah einen Hirsch mit einem Kreuz im Geweih. Im Jahr 118 starb er als Märtyrer, weil er sich weigerte, Götzen anzubeten",
    "Bild": "StEustachius",
@@ -330,8 +286,6 @@
    "Gruppenfarbe": "Gray"
  },
  {
-   "Nr": 23,
-   "LfdNummer": 10,
    "Heiliger": "Heiliger Georg",
    "Kurzbeschreibung": "Georg war Soldat und wurde 304 als Märtyrer enthauptet. Der Legende nach soll er einen gefährlichen Drachen mit einer Lanze bezwungen haben",
    "Bild": "StGeorg",
@@ -345,8 +299,6 @@
    "Gruppenfarbe": "DarkGoldenrod"
  },
  {
-   "Nr": 24,
-   "LfdNummer": 11,
    "Heiliger": "Heilige Katharina",
    "Kurzbeschreibung": "Katharina von Alexandrien war sehr weise und führte mit vielen Gelehrten ihrer Zeit Gespräche über den christlichen Glauben. Sie wurde gerädert. Doch die Räder zerbrachen und töteten ihre Folterer. Im 4. Jahrhundert starb sie als Märtyrerin",
    "Bild": "StCatarina",
@@ -360,8 +312,6 @@
    "Gruppenfarbe": "Red"
  },
  {
-   "Nr": 25,
-   "LfdNummer": 11,
    "Heiliger": "Heilige Katharina",
    "Kurzbeschreibung": "Katharina von Alexandrien war sehr weise und führte mit vielen Gelehrten ihrer Zeit Gespräche über den christlichen Glauben. Sie wurde gerädert. Doch die Räder zerbrachen und töteten ihre Folterer. Im 4. Jahrhundert starb sie als Märtyrerin",
    "Bild": "StCatarina",
@@ -375,8 +325,6 @@
    "Gruppenfarbe": "DarkGoldenrod"
  },
  {
-   "Nr": 26,
-   "LfdNummer": 11,
    "Heiliger": "Heilige Katharina",
    "Kurzbeschreibung": "Katharina von Alexandrien war sehr weise und führte mit vielen Gelehrten ihrer Zeit Gespräche über den christlichen Glauben. Sie wurde gerädert. Doch die Räder zerbrachen und töteten ihre Folterer. Im 4. Jahrhundert starb sie als Märtyrerin",
    "Bild": "StCatarina",
@@ -390,8 +338,6 @@
    "Gruppenfarbe": "DarkSlateGray"
  },
  {
-   "Nr": 27,
-   "LfdNummer": 12,
    "Heiliger": "Heilige Margareta",
    "Kurzbeschreibung": "Margareta besiegte mit dem Kreuzzeichen einen Drachen. Im Jahr 304 erlitt sie den Märtyrertod",
    "Bild": "StMargareta",
@@ -405,8 +351,6 @@
    "Gruppenfarbe": "CadetBlue"
  },
  {
-   "Nr": 28,
-   "LfdNummer": 13,
    "Heiliger": "Heiliger Pantaleon",
    "Kurzbeschreibung": "Pantaleon, ein Arzt, starb um 305 als Märtyrer",
    "Bild": "StPantaleon",
@@ -420,8 +364,6 @@
    "Gruppenfarbe": "Red"
  },
  {
-   "Nr": 29,
-   "LfdNummer": 13,
    "Heiliger": "Heiliger Pantaleon",
    "Kurzbeschreibung": "Pantaleon, ein Arzt, starb um 305 als Märtyrer",
    "Bild": "StPantaleon",
@@ -435,8 +377,6 @@
    "Gruppenfarbe": "DeepPink"
  },
  {
-   "Nr": 30,
-   "LfdNummer": 14,
    "Heiliger": "Heiliger Vitus",
    "Kurzbeschreibung": "Vitus wurde bereits als Siebenjähriger gemeinsam mit seiner Amme und seinem Lehrer enthauptet",
    "Bild": "StVitus",
@@ -450,8 +390,6 @@
    "Gruppenfarbe": "Blue"
  },
  {
-   "Nr": 31,
-   "LfdNummer": 14,
    "Heiliger": "Heiliger Vitus",
    "Kurzbeschreibung": "Vitus wurde bereits als Siebenjähriger gemeinsam mit seiner Amme und seinem Lehrer enthauptet",
    "Bild": "StVitus",
@@ -465,8 +403,6 @@
    "Gruppenfarbe": "Gray"
  },
  {
-   "Nr": 32,
-   "LfdNummer": 14,
    "Heiliger": "Heiliger Vitus",
    "Kurzbeschreibung": "Vitus wurde bereits als Siebenjähriger gemeinsam mit seiner Amme und seinem Lehrer enthauptet",
    "Bild": "StVitus",
@@ -478,5 +414,57 @@
    "Nothelfergebet": "Ihr heiligen Nothelfer, ihr treuen Nachfolger Christi, der zum Heil aller Menschen Todesangst, Schmerz, Leid und Tod auf sich genommen hat, wir bitten euch um Fürsprache für die Nöte, die uns überfallen:\nIhr Heiligen Dionysius, Blasius und Erasmus: euch empfehlen wir besonders die Menschen, die unter körperlichen Schmerzen leiden, die Kranken, Verwundeten, Gefolterten und Gekreuzigten. Christus, der Mann der Schmerzen, schenke ihnen Linderung und Bereitschaft, sein erlösendes Todesleiden für diese Zeit mitzutragen.\nIhr Heiligen Georg, Pantaleon und Vitus, euch empfehlen wir die Menschen, die mit unheilbarer Krankheit geschlagen sind – Christus gebe ihnen die Kraft, ihr Kreuz zu tragen und Zeugnis für das unvergängliche Leben abzulegen.\nHeiliger Christophorus,\nauf deine Fürsprache bewahre uns Gott vor Unfall und plötzlichem Tod…\nAuch die schlimme geistige Not tragen wir vor euch und bitten besonders die heiligen Eustachius, Ägidius, Katharina und Margareta für alle, deren Leben ausweglos verstrickt scheint, für alle, die das rechte Wort des Bekenntnisses, des Trostes, der Vergebung nicht über die Lippen bringen, die in der Not ihrer Schuld den Weg zur Buße nicht finden, für die Mütter, die angstvoll einer schweren Niederkunft entgegen sehen: der Herr allen Lebens löse ihnen Schuld und Verstrickung und führe alles zu einem guten Ende. Ganz besonders tragen wir vor euch die Not des Todes.\nIhr heiligen Achatius, Cyriakus und Barbara, bittet den Herrn, der das Herz jedes Menschen kennt, dass er uns in der Stunde unseres Todes vor Angst bewahre und uns glücklich heimführe zur ewigen Freude. Amen.\nHerr,\ndu weißt, dass sich viele Menschen von früh bis spät Sorgen machen, wie alles weiter gehen soll. Du warnst uns vor der ängstlichen Sorge und lädst uns ein, alle Sorgen auf dich zu werfen. Die vierzehn Nothelfer haben sich dir ganz anvertraut und uns so das Beispiel christlichen Sorgens gegeben.\nWir bitten dich:\nauf ihre Fürsprache befreie uns von aller übertriebenen Sorge um den morgigen Tag und schenke uns jene heilige Gelassenheit, mit der du deine Heiligen ausgezeichnet hast. So bitten wir durch Christus, unseren Herrn. Amen.\nGott, unser Vater,\ndu stärkst dein Volk durch die Freude über die Verherrlichung der vierzehn heiligen Nothelfer. Sie sind Christus nachgefolgt auf dem Weg des Kreuzes und haben ihr Leben vollendet als Zeugen des Glaubens.\nGib auch uns Anteil am Erbe deiner Heiligen und lass in unsere Zeit die Macht ihrer Fürbitte sichtbar werden.\nSo bitten wir durch Christus, unseren Herrn.\nAmen.",
    "Gruppe": "G",
    "Gruppenfarbe": "DarkOrange"
+ },
+ {
+   "Heiliger": "Saint Agathius",
+   "Kurzbeschreibung": "Achatius was a soldier and was crucified in 138 for his belief",
+   "Bild": "StAchatius",
+   "Sprache": "English",
+   "Gedenktag": "8.5.",
+   "Nothilfe": "Agony",
+   "Lied": "When at night I go to sleep,\nFourteen angels watch do keep,\nTwo my head are guarding,\nTwo my feet are guiding;\nTwo upon my right hand,\nTwo upon my left hand. \nTwo who warmly cover\nTwo who o'er me hover,\nTwo to whom 'tis given\nTo guide my steps to heaven.",
+   "Hintergrundfarbe": "#3B6253",
+   "Nothelfergebet": "Fourteen Holy Helpers, who served God in humility and confidence on earth and are now in the enjoyment of His beatific vision in Heaven; because thou persevered till death thou gained the crown of eternal life. Remember the dangers that surround us in this vale of tears, and intercede for us in all our needs and adversities. Amen. \n\nFourteen Holy Helpers, select friends of God, I honor thee as mighty intercessors, and come with filial confidence to thee in my needs, for the relief of which I have undertaken to make this novena. Help me by thy intercession to placate God's wrath, which I have provoked by my sins, and aid me in amending my life and doing penance. Obtain for me the grace to serve God with a willing heart, to be resigned to His holy will, to be patient in adversity and to persevere unto the end, so that, having finished my earthly course, I may join thee in Heaven, there to praise for ever God, who is wonderful in His Saints. Amen.",
+   "Gruppe": "A",
+   "Gruppenfarbe": "Red"
+ },
+ {
+   "Heiliger": "Saint Agathius",
+   "Kurzbeschreibung": "Achatius was a soldier and was crucified in 138 for his belief",
+   "Bild": "StAchatius",
+   "Sprache": "English",
+   "Gedenktag": "8.5.",
+   "Nothilfe": "Desperation",
+   "Lied": "When at night I go to sleep,\nFourteen angels watch do keep,\nTwo my head are guarding,\nTwo my feet are guiding;\nTwo upon my right hand,\nTwo upon my left hand. \nTwo who warmly cover\nTwo who o'er me hover,\nTwo to whom 'tis given\nTo guide my steps to heaven.",
+   "Hintergrundfarbe": "#3B6253",
+   "Nothelfergebet": "Fourteen Holy Helpers, who served God in humility and confidence on earth and are now in the enjoyment of His beatific vision in Heaven; because thou persevered till death thou gained the crown of eternal life. Remember the dangers that surround us in this vale of tears, and intercede for us in all our needs and adversities. Amen. \n\nFourteen Holy Helpers, select friends of God, I honor thee as mighty intercessors, and come with filial confidence to thee in my needs, for the relief of which I have undertaken to make this novena. Help me by thy intercession to placate God's wrath, which I have provoked by my sins, and aid me in amending my life and doing penance. Obtain for me the grace to serve God with a willing heart, to be resigned to His holy will, to be patient in adversity and to persevere unto the end, so that, having finished my earthly course, I may join thee in Heaven, there to praise for ever God, who is wonderful in His Saints. Amen.",
+   "Gruppe": "D",
+   "Gruppenfarbe": "#be29ec"
+ },
+ {
+   "Heiliger": "Saint Agathius",
+   "Kurzbeschreibung": "Achatius was a soldier and was crucified in 138 for his belief",
+   "Bild": "StAchatius",
+   "Sprache": "English",
+   "Gedenktag": "8.5.",
+   "Nothilfe": "Disbelief",
+   "Lied": "When at night I go to sleep,\nFourteen angels watch do keep,\nTwo my head are guarding,\nTwo my feet are guiding;\nTwo upon my right hand,\nTwo upon my left hand. \nTwo who warmly cover\nTwo who o'er me hover,\nTwo to whom 'tis given\nTo guide my steps to heaven.",
+   "Hintergrundfarbe": "#3B6253",
+   "Nothelfergebet": "Fourteen Holy Helpers, who served God in humility and confidence on earth and are now in the enjoyment of His beatific vision in Heaven; because thou persevered till death thou gained the crown of eternal life. Remember the dangers that surround us in this vale of tears, and intercede for us in all our needs and adversities. Amen. \n\nFourteen Holy Helpers, select friends of God, I honor thee as mighty intercessors, and come with filial confidence to thee in my needs, for the relief of which I have undertaken to make this novena. Help me by thy intercession to placate God's wrath, which I have provoked by my sins, and aid me in amending my life and doing penance. Obtain for me the grace to serve God with a willing heart, to be resigned to His holy will, to be patient in adversity and to persevere unto the end, so that, having finished my earthly course, I may join thee in Heaven, there to praise for ever God, who is wonderful in His Saints. Amen.",
+   "Gruppe": "D",
+   "Gruppenfarbe": "#be29ec"
+ },
+ {
+   "Heiliger": "Saint Agathius",
+   "Kurzbeschreibung": "Achatius was a soldier and was crucified in 138 for his belief",
+   "Bild": "StAchatius",
+   "Sprache": "English",
+   "Gedenktag": "8.5.",
+   "Nothilfe": "Prosecution",
+   "Lied": "When at night I go to sleep,\nFourteen angels watch do keep,\nTwo my head are guarding,\nTwo my feet are guiding;\nTwo upon my right hand,\nTwo upon my left hand. \nTwo who warmly cover\nTwo who o'er me hover,\nTwo to whom 'tis given\nTo guide my steps to heaven.",
+   "Hintergrundfarbe": "#3B6253",
+   "Nothelfergebet": "Fourteen Holy Helpers, who served God in humility and confidence on earth and are now in the enjoyment of His beatific vision in Heaven; because thou persevered till death thou gained the crown of eternal life. Remember the dangers that surround us in this vale of tears, and intercede for us in all our needs and adversities. Amen. \n\nFourteen Holy Helpers, select friends of God, I honor thee as mighty intercessors, and come with filial confidence to thee in my needs, for the relief of which I have undertaken to make this novena. Help me by thy intercession to placate God's wrath, which I have provoked by my sins, and aid me in amending my life and doing penance. Obtain for me the grace to serve God with a willing heart, to be resigned to His holy will, to be patient in adversity and to persevere unto the end, so that, having finished my earthly course, I may join thee in Heaven, there to praise for ever God, who is wonderful in His Saints. Amen.",
+   "Gruppe": "P",
+   "Gruppenfarbe": "#404be3"
  }
 ]

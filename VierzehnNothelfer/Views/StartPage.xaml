@@ -6,13 +6,18 @@
     xmlns:model="clr-namespace:VierzehnNothelfer.Models"
     xmlns:fontawesome="clr-namespace:FontAwesome"
     xmlns:gradient="http://magic.com/schemas/gradients"
-    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="VierzehnNothelfer.Views.StartPage"
     x:DataType="vm:NothelferViewModel">
 
     <ContentPage.BindingContext>
         <vm:NothelferViewModel/>
     </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing"
+                                    Command="{Binding StartPageAppearingCommand}"/>
+    </ContentPage.Behaviors>
 
     <Grid>
         <gradient:GradientView GradientSource="linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%,rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%,rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%,rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%,rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%,rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%,rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%),linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%,rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%,rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%,rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%,rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%,rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%,rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%)"
@@ -53,12 +58,13 @@
                                            TextColor="LightYellow"
                                            FontFamily="LB-R"
                                            CharacterSpacing="1"/>
-                                    <Label Text="{Binding ListeNothilfen[21].Lied}"
+                                    <Label Text="Lied"
                                            HorizontalTextAlignment="Center"
                                            FontSize="19"
                                            TextColor="LightCyan"
                                            CharacterSpacing="2"
                                            FontFamily="LB-I"/>
+                                    <!--Text="{Binding ListeNothilfen[21].Lied}"-->
                                 </StackLayout>
                             </ScrollView>
                         </Grid>
@@ -68,7 +74,7 @@
 
                     <CollectionView ItemsSource="{Binding ListeNothilfen}"
                                     ItemsLayout="VerticalGrid"
-                                    Margin="0,15,0,0">
+                                    Margin="0,15,0,15">
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="model:NothelferBackup">
                                 <StackLayout Padding="5">
@@ -77,7 +83,7 @@
                                                 BackgroundColor="{Binding Gruppenfarbe}"
                                                 VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                                                 FontAttributes="Bold" FontSize="Large" TextDecorations="Underline"
-                                                WidthRequest="50"
+                                                WidthRequest="40"
                                                 TextColor="White">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
@@ -85,8 +91,9 @@
                                                     CommandParameter="{Binding Heiliger}"/>
                                             </Label.GestureRecognizers>
                                         </Label>
-                                        <Label Text="{Binding Nothilfe}" FontSize="Large" VerticalTextAlignment="Center"
-                                                TextColor="Black">
+                                        <Label Text="{Binding Nothilfe}"
+                                               FontSize="Large" VerticalTextAlignment="Center"
+                                               TextColor="Black">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
                                                     Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
@@ -95,7 +102,7 @@
                                         </Label>
                                         <Label Text="{Static fontawesome:FontAwesomeIcons.ArrowAltCircleRight}" FontFamily="FA-S"
                                                 TextColor="{Binding Gruppenfarbe}" HorizontalOptions="EndAndExpand"
-                                                FontSize="45" Margin="0,0,15,0">
+                                                FontSize="40">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer
                                                     Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
@@ -141,12 +148,12 @@
                         BorderColor="Transparent"
                         FontSize="33"
                         TextColor="#191919"
-                        Clicked="Button_Clicked"/>
+                        Clicked="Flag_Clicked"/>
                 <Button Grid.Column="2" Text="{Static fontawesome:FontAwesomeIcons.InfoCircle}"
                         FontFamily="FA-S"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
-                        FontSize="35"
+                        FontSize="34"
                         TextColor="#191919"
                         Clicked="Button_Clicked"/>
             </Grid>

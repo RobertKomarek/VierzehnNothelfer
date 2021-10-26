@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="MagicGradients" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
@@ -19,6 +19,7 @@
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="19.3.0.46" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.3.0.46" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="MagicGradients" />
@@ -44,6 +45,7 @@
     <None Remove="Fonts\LibreBaskerville-Bold.ttf" />
     <None Remove="Fonts\LibreBaskerville-Italic.ttf" />
     <None Remove="Fonts\LibreBaskerville-Regular.ttf" />
+    <None Remove="Xamarin.CommunityToolkit" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
