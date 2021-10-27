@@ -80,8 +80,12 @@ namespace VierzehnNothelfer.ViewModels
             }
             else
             {
-                InterimListeNothilfen = InterimListeNothilfen.Where(x => x.Sprache == "Deutsch").ToList();
+                //FÜR DIE STARTSEITE ALLE NOTHILFEN, GRUPPEN UND GRUPPENFARBEN AUSWÄHLEN
+                InterimListeNothilfen = interimList.OrderBy(x => x.Gruppe).Where(x => x.Sprache == "Deutsch").ToList();
                 ListeNothilfen = new ObservableCollection<NothelferBackup>(InterimListeNothilfen);
+                //FÜR DIE CAROUSELVIEW GRUPPIEREN UND DEN ERSTEN EINTRAG AUSWÄHLEN
+                DistinctHeilige = interimList.GroupBy(x => x.Heiliger).Select(x => x.First()).Where(x => x.Sprache == "Deutsch").OrderBy(x => x.Heiliger).ToList();
+                NothelferCollection = new ObservableCollection<NothelferBackup>(DistinctHeilige);
             }
         }
 

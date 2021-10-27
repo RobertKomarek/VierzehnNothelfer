@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:gradient="http://magic.com/schemas/gradients"
     xmlns:vm="clr-namespace:VierzehnNothelfer.ViewModels"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
     x:Class="VierzehnNothelfer.Views.EinstellungenPage"
     x:DataType="vm:NothelferViewModel">
 
@@ -15,53 +16,89 @@
         <Grid>
             <gradient:GradientView VerticalOptions="FillAndExpand"
                                    HorizontalOptions="FillAndExpand"
-                                   Opacity="0.7"
                                    GradientSource="linear-gradient(0deg, #ffffff 0%,transparent 100%),linear-gradient(90deg, #ffffff 0%,transparent 100%),linear-gradient(135deg, rgba(51, 51, 51, 0.1) 0%, rgba(51, 51, 51, 0.1) 66%,rgba(249, 249, 249, 0.1) 66%, rgba(249, 249, 249, 0.1) 100%),linear-gradient(0deg, rgba(231, 231, 231, 0.05) 0%, rgba(231, 231, 231, 0.05) 83%,rgba(255, 255, 255, 0.05) 83%, rgba(255, 255, 255, 0.05) 100%),linear-gradient(0deg, rgba(32, 32, 32, 0.1) 0%, rgba(32, 32, 32, 0.1) 51%,rgba(138, 138, 138, 0.1) 51%, rgba(138, 138, 138, 0.1) 100%),linear-gradient(0deg, rgba(79, 79, 79, 0.07) 0%, rgba(79, 79, 79, 0.07) 9%,rgba(52, 52, 52, 0.07) 9%, rgba(52, 52, 52, 0.07) 100%),linear-gradient(135deg, rgba(154, 154, 154, 0.05) 0%, rgba(154, 154, 154, 0.05) 82%,rgba(76, 76, 76, 0.05) 82%, rgba(76, 76, 76, 0.05) 100%),linear-gradient(0deg, rgba(226, 226, 226, 0.1) 0%, rgba(226, 226, 226, 0.1) 87%,rgba(158, 158, 158, 0.1) 87%, rgba(158, 158, 158, 0.1) 100%),linear-gradient(45deg, rgba(177, 177, 177, 0.1) 0%, rgba(177, 177, 177, 0.1) 82%,rgba(199, 199, 199, 0.1) 82%, rgba(199, 199, 199, 0.1) 100%),linear-gradient(135deg, rgba(41, 41, 41, 0.04) 0%, rgba(41, 41, 41, 0.04) 10%,rgba(28, 28, 28, 0.04) 10%, rgba(28, 28, 28, 0.04) 100%),linear-gradient(90deg, rgb(174, 174, 174),rgb(181, 181, 181))"/>
-            <StackLayout Padding="10" Spacing="25">
-                <Label Text="Sprache / Language"
-                       FontFamily="LB-B"
-                       FontSize="26"
-                       TextColor="White"
-                       HorizontalTextAlignment="Center"/>
+            <Label Text="{Static fontawesome:FontAwesomeIcons.GlobeAmericas}"
+                FontFamily="FA-S"
+                FontSize="255"
+                TextColor="LightGray"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Opacity="0.3"
+                Margin="0,0,0,35"/>
 
-                <StackLayout Orientation="Horizontal"
-                            HorizontalOptions="Center"
-                            Spacing="10">
-                    <ImageButton ClassId="btnGerman"
-                            Source="germany"
-                            WidthRequest="100"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Aspect="AspectFill"
-                            CornerRadius="20"
-                            BorderWidth="5"
-                            Command="{Binding ChangeLanguageCommand}"
-                            CommandParameter="Deutsch"/>
-                    <Label Text="Deutsch"
-                           VerticalOptions="Center"
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           />
-                </StackLayout>
-                 <StackLayout Orientation="Horizontal"
-                            HorizontalOptions="Center"
-                            Spacing="10">
-                    <ImageButton ClassId="btnEnglish"
-                            Source="usa"
-                            WidthRequest="100"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Aspect="AspectFit"
-                            CornerRadius="20"
-                            BorderWidth="5"
-                            Command="{Binding ChangeLanguageCommand}"
-                            CommandParameter="English"/>
-                    <Label Text="English"
-                           VerticalOptions="Center"
-                           FontSize="Large"
-                           FontAttributes="Bold"/>
-                </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         Padding="25"
+                         Spacing="25">
+
+                <Label Text="Language | Langue | Sprache"
+                       TextColor="White"
+                       FontFamily="LB-B"
+                       FontSize="28"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                <BoxView HeightRequest="0.7" Color="LightGray" />
+
+                <ScrollView>
+                    <StackLayout Padding="35" Spacing="55">
+                         <StackLayout Orientation="Horizontal"
+                                HorizontalOptions="StartAndExpand"
+                                Spacing="20">
+                            <ImageButton Style="{StaticResource imageButtonFlag}"
+                                ClassId="btnEnglish"
+                                Source="usa"
+                                Command="{Binding ChangeLanguageCommand}"
+                                CommandParameter="English"/>
+                            <Label Text="English"
+                                Grid.Column="1"
+                                VerticalOptions="Center"
+                                FontSize="Large"
+                                FontAttributes="Bold"/>
+                         </StackLayout>
+
+                        <StackLayout Orientation="Horizontal"
+                                HorizontalOptions="StartAndExpand"
+                                Spacing="20">
+                            <ImageButton Style="{StaticResource imageButtonFlag}"
+                                Source="france"
+                                Command="{Binding ChangeLanguageCommand}"
+                                CommandParameter="French"/>
+                            <Label Text="Français"
+                                VerticalOptions="Center"
+                                FontSize="Large"
+                                FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal"
+                                HorizontalOptions="StartAndExpand"
+                                Spacing="20">
+                            <ImageButton Style="{StaticResource imageButtonFlag}"
+                                Source="germany"
+                                ClassId="btnGerman"
+                                Command="{Binding ChangeLanguageCommand}"
+                                CommandParameter="Deutsch"/>
+                            <Label Text="Deutsch"
+                                VerticalOptions="Center"
+                                FontSize="Large"
+                                FontAttributes="Bold"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
             </StackLayout>
+
+            <Button Text="{Static fontawesome:FontAwesomeIcons.Home}"
+                BackgroundColor="Gray"
+                BorderColor="LightGray" BorderWidth="2"
+                TextColor="White"
+                FontFamily="FA-S"
+                FontSize="Large"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                HeightRequest="60"
+                WidthRequest="60"
+                CornerRadius="30"
+                Margin="20"
+                Clicked="Button_Clicked"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
