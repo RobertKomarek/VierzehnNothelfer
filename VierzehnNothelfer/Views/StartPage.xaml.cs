@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Syncfusion.ListView;
 
 using Xamarin.Forms;
@@ -24,5 +25,27 @@ namespace VierzehnNothelfer.Views
         {
             await Navigation.PushModalAsync(new EinstellungenPage());
         }
+
+
+        public double previousOffset { get; set; }
+
+        async void CollectionView_Scrolled(System.Object sender, ScrolledEventArgs e)
+        {
+            if (previousOffset < e.ScrollY - 45) //scroll sensitivity
+            {
+                await bottomNavbarGrid.TranslateTo(0, 75, 300);
+            }
+            else if (previousOffset > e.ScrollY + 45)
+            {
+                await bottomNavbarGrid.TranslateTo(0, 0, 200);
+            }
+            else
+            {
+                return;
+            }
+
+            previousOffset = e.ScrollY;
+        }
+
     }
 }

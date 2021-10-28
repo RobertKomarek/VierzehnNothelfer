@@ -33,14 +33,15 @@
                    HorizontalTextAlignment="End"
                    TextColor="WhiteSmoke"
                    CharacterSpacing="3">
-                <Label.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="LightGray" Offset="0.1" />
-                        <GradientStop Color="#191919" Offset="1.0" />
-                    </LinearGradientBrush> 
-                </Label.Background>
+                    <Label.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="LightGray" Offset="0.1" />
+                            <GradientStop Color="#191919" Offset="1.0" />
+                        </LinearGradientBrush> 
+                    </Label.Background>
             </Label>
-            <ScrollView Margin="0,0,0,0">
+            <ScrollView Margin="0,0,0,0"
+                        Scrolled="CollectionView_Scrolled">
                 <StackLayout>
                     <pancake:PancakeView Margin="-3,0,-3,0"
                                          Border="{pancake:BorderMarkup Color=DarkGray, Thickness=3}">
@@ -58,12 +59,12 @@
                                            TextColor="LightYellow"
                                            FontFamily="LB-R"
                                            CharacterSpacing="1"/>
-                                    <Label Text="Lied"
+                                    <!--<Label Text="Lied"
                                            HorizontalTextAlignment="Center"
                                            FontSize="19"
                                            TextColor="LightCyan"
                                            CharacterSpacing="2"
-                                           FontFamily="LB-I"/>
+                                           FontFamily="LB-I"/>-->
                                     <!--Text="{Binding ListeNothilfen[21].Lied}"-->
                                 </StackLayout>
                             </ScrollView>
@@ -73,11 +74,11 @@
                     <!--<BoxView HeightRequest="0.7" Color="Gray" Margin="0,5,0,0" />-->
 
                     <CollectionView ItemsSource="{Binding ListeNothilfen}"
-                                    ItemsLayout="VerticalGrid"
-                                    Margin="0,15,0,15">
+                        ItemsLayout="VerticalGrid"
+                        Margin="0,15,-50,0">
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="model:NothelferBackup">
-                                <StackLayout Padding="5">
+                                <StackLayout Margin="5,0,5,0">
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="{Binding Gruppe}"
                                                 BackgroundColor="{Binding Gruppenfarbe}"
@@ -108,7 +109,6 @@
                                                     Command="{Binding Source={RelativeSource AncestorType={Type vm:NothelferViewModel}}, Path=ZuMeinemHeiligenCommand}"
                                                     CommandParameter="{Binding Bild}"/>
                                             </Label.GestureRecognizers>
-
                                         </Label>
                                     </StackLayout>
                                     <BoxView HeightRequest="0.7" Color="LightGray"/>
@@ -118,27 +118,23 @@
                     </CollectionView>
                 </StackLayout>
             </ScrollView>
+        </StackLayout>
 
-            <!--<pancake:PancakeView Border="{pancake:BorderMarkup Color=DarkGray, Thickness=3}"
-                                 Margin="-3,0,0,0"
-                                 HeightRequest="85"
-                                 HorizontalOptions="CenterAndExpand">
-            </pancake:PancakeView>-->
-            <Grid ColumnDefinitions="*,*,*"
-                  RowDefinitions="75"
-                BackgroundColor="Transparent" >
-                <!--<StackLayout.Background>
+        <Grid x:Name="bottomNavbarGrid"
+            ColumnDefinitions="*,*,*"
+            BackgroundColor="Transparent"
+            HeightRequest="75"
+            VerticalOptions="EndAndExpand">
+                <Grid.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="#191919" Offset="0.1" />
-                        <GradientStop Color="LightGray" Offset="1.0" />
+                        <GradientStop Color="LightGray" Offset="0.1" />
+                        <GradientStop Color="#191919" Offset="1.0" />
                     </LinearGradientBrush> 
-                </StackLayout.Background>-->
-                <!--<Button Text="{Static fontawesome:FontAwesomeIcons.ListAlt}"
-                        FontFamily="FA-S" BackgroundColor="Transparent" BorderColor="Transparent" />-->
+                </Grid.Background>
                 <Button Text="{Static fontawesome:FontAwesomeIcons.ListAlt}"
                         FontFamily="FA-S"
                         BackgroundColor="Transparent"
-                        TextColor="#191919"
+                        TextColor="WhiteSmoke"
                         BorderColor="Transparent"
                         FontSize="30"
                         Clicked="Button_Clicked"/>
@@ -147,16 +143,15 @@
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         FontSize="33"
-                        TextColor="#191919"
+                        TextColor="WhiteSmoke"
                         Clicked="Flag_Clicked"/>
                 <Button Grid.Column="2" Text="{Static fontawesome:FontAwesomeIcons.InfoCircle}"
                         FontFamily="FA-S"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         FontSize="34"
-                        TextColor="#191919"
+                        TextColor="WhiteSmoke"
                         Clicked="Button_Clicked"/>
-            </Grid>
-        </StackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
