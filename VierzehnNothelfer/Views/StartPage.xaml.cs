@@ -27,24 +27,20 @@ namespace VierzehnNothelfer.Views
         }
 
 
-        public double previousOffset { get; set; }
+        public double previousSCrollPostion { get; set; } = 0;
 
         async void CollectionView_Scrolled(System.Object sender, ScrolledEventArgs e)
         {
-            if (previousOffset < e.ScrollY - 45) //scroll sensitivity
+            if (previousSCrollPostion < e.ScrollY ) //scroll sensitivity
             {
-                await bottomNavbarGrid.TranslateTo(0, 75, 300);
+                await bottomNavbarGrid.TranslateTo(0, 75, 225);
             }
-            else if (previousOffset > e.ScrollY + 45)
+            else 
             {
-                await bottomNavbarGrid.TranslateTo(0, 0, 200);
+                await bottomNavbarGrid.TranslateTo(0, 0, 125);
+                previousSCrollPostion = 0;
             }
-            else
-            {
-                return;
-            }
-
-            previousOffset = e.ScrollY;
+            
         }
 
     }
